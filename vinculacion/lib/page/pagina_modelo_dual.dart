@@ -41,7 +41,14 @@ class ModeloEducacionDual extends StatelessWidget {
               fontSize: 12,
             ),
           ),
-        )
+        ),
+        Text(
+          "Convocatorias Abiertas",
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: 20,
+          ),
+        ),
       ]),
     );
   }
