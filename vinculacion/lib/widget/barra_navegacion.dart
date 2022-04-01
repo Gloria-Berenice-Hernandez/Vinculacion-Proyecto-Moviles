@@ -4,98 +4,71 @@ import '../page/pagina_inicio.dart';
 import '../page/pagina_bolsa_trabajo.dart';
 
 class BarraNavegacion extends StatelessWidget {
-  final padding = EdgeInsets.symmetric(horizontal: 5);
+  final padding = const EdgeInsets.symmetric(horizontal: 5);
 
   @override
   Widget build(BuildContext context) {
     return Drawer(
       child: Material(
-        color: Color.fromRGBO(50, 75, 205, 1),
+        color: const Color.fromRGBO(50, 75, 205, 1),
         child: ListView(
           padding: padding,
           children: [
-
-            SizedBox(height: 75,),
+            const SizedBox(
+              height: 75,
+            ),
             ItemMenu(
               texto: 'Inicio',
               itemPresionado: () => itemSeleccionado(context, 0),
             ),
-
-            ExpansionTile(
-                title: Text('Nosotros', style: TextStyle(color: Colors.white)),
-              children: [
-
-              ],
+            const ExpansionTile(
+              title: Text('Nosotros', style: TextStyle(color: Colors.white)),
+              children: [],
             ),
-
-            ExpansionTile(
-              title: Text('Oferta Educativa', style: TextStyle(color: Colors.white)),
-              children: [
-
-              ],
+            const ExpansionTile(
+              title: Text('Oferta Educativa',
+                  style: TextStyle(color: Colors.white)),
+              children: [],
             ),
-
-            ExpansionTile(
+            const ExpansionTile(
               title: Text('Estudiantes', style: TextStyle(color: Colors.white)),
-              children: [
-
-              ],
+              children: [],
             ),
-
-            ExpansionTile(
+            const ExpansionTile(
               title: Text('Aspirantes', style: TextStyle(color: Colors.white)),
-              children: [
-
-              ],
+              children: [],
             ),
-
-            ExpansionTile(
+            const ExpansionTile(
               title: Text('Docente', style: TextStyle(color: Colors.white)),
-              children: [
-
-              ],
+              children: [],
             ),
-
             ItemMenu(
               texto: 'Convocatorias',
               itemPresionado: () => itemSeleccionado(context, 0),
             ),
-
             ExpansionTile(
-              title: Text('Vinculación', style: TextStyle(color: Colors.white)),
+              title: const Text('Vinculación',
+                  style: TextStyle(color: Colors.white)),
               children: [
-
                 ItemMenu(
                   texto: '    Modelo de Educación DUAL',
                   itemPresionado: () => itemSeleccionado(context, 7),
                 ),
-
                 ItemMenu(
                   texto: '    Bolsa de Trabajo',
                   itemPresionado: () => itemSeleccionado(context, 8),
                 ),
-
               ],
             ),
-
-            ExpansionTile(
-              title: Text('Sistemas de Gestión', style: TextStyle(color: Colors.white)),
-              children: [
-
-              ],
+            const ExpansionTile(
+              title: Text('Sistemas de Gestión',
+                  style: TextStyle(color: Colors.white)),
+              children: [],
             ),
-
-            ExpansionTile(
+            const ExpansionTile(
               title: Text('Sistemas', style: TextStyle(color: Colors.white)),
-              children: [
-
-              ],
+              children: [],
             ),
-
-
-
-
-
           ],
         ),
       ),
@@ -109,17 +82,19 @@ class BarraNavegacion extends StatelessWidget {
     final color = Colors.white;
 
     return ListTile(
-      title: Text(texto, style: TextStyle(color: color),),
+      title: Text(
+        texto,
+        style: TextStyle(color: color),
+      ),
       onTap: itemPresionado,
     );
   }
 
-  void itemSeleccionado(BuildContext context, int indice){
-
-    switch(indice){
+  void itemSeleccionado(BuildContext context, int indice) {
+    switch (indice) {
       case 7:
         Navigator.of(context).push(MaterialPageRoute(
-            builder: (context) => ModeloEducacionDual(),
+          builder: (context) => ModeloEducacionDual(),
         ));
         break;
 
@@ -134,11 +109,6 @@ class BarraNavegacion extends StatelessWidget {
           builder: (context) => PaginaInicio(),
         ));
         break;
-
     }
-
   }
-
-
 }
-
