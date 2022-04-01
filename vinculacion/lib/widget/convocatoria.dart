@@ -10,16 +10,10 @@ class Convocatoria extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
-          border: Border(bottom: BorderSide(
-              color: Colors.indigo,
-              width: 5
-          ))
-      ),
-
+      decoration: const BoxDecoration(
+          border: Border(bottom: BorderSide(color: Colors.indigo, width: 5))),
       child: Row(
         children: [
-
           Container(
             height: 155,
             width: 155,
@@ -28,20 +22,16 @@ class Convocatoria extends StatelessWidget {
               fit: BoxFit.contain,
             ),
           ),
-
           Container(
-              decoration: BoxDecoration(
-                  border: Border(left: BorderSide(
-                      color: Colors.indigo,
-                      width: 5
-                  ))
-              ),
-              padding: EdgeInsets.all(5),
-              width: 250,
-              child: Text(
-                  texto,
-                textAlign: TextAlign.justify,
-              ),
+            decoration: const BoxDecoration(
+                border:
+                    Border(left: BorderSide(color: Colors.indigo, width: 5))),
+            padding: const EdgeInsets.all(5),
+            width: 250,
+            child: Text(
+              texto,
+              textAlign: TextAlign.justify,
+            ),
           ),
         ],
       ),

@@ -9,22 +9,22 @@ class Normativa extends StatelessWidget {
     return Column(
       children: [
         Container(
-            margin: EdgeInsets.all(12),
-            child: Text('Normatividad', style: TextStyle(fontSize: 22),)
-        ),
-
+            margin: const EdgeInsets.all(12),
+            child: const Text(
+              'Normatividad',
+              style: TextStyle(fontSize: 22),
+            )),
         Container(
-            margin: EdgeInsets.all(12),
-            child:
-            InkWell(
-              onTap: () => launch('https://www.ensenada.tecnm.mx/wp-content/uploads/2021/08/MODELO-DUAL-2015-TecNM.pdf'),
-              child: Text('• Modelo de Educación Dual para nivel licenciatura del Tecnológico Nacional de México (MEDTecNM)',
-                style: TextStyle(color: Colors.indigo),),
+          margin: const EdgeInsets.all(12),
+          child: InkWell(
+            onTap: () => launch(
+                'https://www.ensenada.tecnm.mx/wp-content/uploads/2021/08/MODELO-DUAL-2015-TecNM.pdf'),
+            child: const Text(
+              '• Modelo de Educación Dual para nivel licenciatura del Tecnológico Nacional de México (MEDTecNM)',
+              style: TextStyle(color: Colors.indigo),
             ),
-
+          ),
         ),
-
-
       ],
     );
   }

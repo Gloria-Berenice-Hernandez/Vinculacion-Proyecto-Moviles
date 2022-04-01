@@ -79,7 +79,7 @@ class BarraNavegacion extends StatelessWidget {
     required String texto,
     VoidCallback? itemPresionado,
   }) {
-    final color = Colors.white;
+    const color = Colors.white;
 
     return ListTile(
       title: Text(
@@ -100,13 +100,13 @@ class BarraNavegacion extends StatelessWidget {
 
       case 8:
         Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => BolsaDeTrabajo(),
+          builder: (context) => const BolsaDeTrabajo(),
         ));
         break;
 
       default:
         Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => PaginaInicio(),
+          builder: (context) => const PaginaInicio(),
         ));
         break;
     }
