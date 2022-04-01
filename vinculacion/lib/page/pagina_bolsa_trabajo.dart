@@ -9,16 +9,16 @@ class BolsaDeTrabajo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Bolsa de Trabajo'),
+          title: const Text('Bolsa de Trabajo'),
           backgroundColor: Colors.indigo[900],
           actions: [
             IconButton(
               onPressed: () {
                 Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => PaginaInicio(),
+                  builder: (context) => const PaginaInicio(),
                 ));
               },
-              icon: Icon(Icons.home),
+              icon: const Icon(Icons.home),
             ),
           ],
         ),
@@ -26,28 +26,28 @@ class BolsaDeTrabajo extends StatelessWidget {
           children: [
             Container(
               color: Colors.indigo[900],
-              margin: EdgeInsets.all(15),
+              margin: const EdgeInsets.all(15),
               child: Container(
-                  margin: EdgeInsets.all(10),
-                  child: Image(
+                  margin: const EdgeInsets.all(10),
+                  child: const Image(
                     image: AssetImage('assets/images/VACANTES.1.jpg'),
                   )),
             ),
             Container(
               color: Colors.indigo[900],
-              margin: EdgeInsets.all(15),
+              margin: const EdgeInsets.all(15),
               child: Container(
-                  margin: EdgeInsets.all(10),
-                  child: Image(
+                  margin: const EdgeInsets.all(10),
+                  child: const Image(
                     image: AssetImage('assets/images/VACANTES.2022.1.jpg'),
                   )),
             ),
             Container(
               color: Colors.indigo[900],
-              margin: EdgeInsets.all(15),
+              margin: const EdgeInsets.all(15),
               child: Container(
-                  margin: EdgeInsets.all(10),
-                  child: Image(
+                  margin: const EdgeInsets.all(10),
+                  child: const Image(
                     image: AssetImage('assets/images/VACANTES-2022.jpg'),
                   )),
             ),
