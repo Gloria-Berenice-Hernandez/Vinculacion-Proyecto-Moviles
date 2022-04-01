@@ -22,7 +22,27 @@ class ModeloEducacionDual extends StatelessWidget {
           ),
         ],
       ),
-      body: const Text('Modelo Dual'),
+      body: ListView(children: const [
+        ListTile(
+          title: Text(
+            "Modelo de Educacion Dual",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 20,
+            ),
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.all(10.0),
+          child: Text(
+            "Estudiantes del Instituto Tecnológico de Ensenada del TecNM\nConoce e incorporate al Modelo de Educación Dual es importante en tu formación académica-laboral.\nTe presentamos Lineamientos, procedimiento, formatos y lo que necesitas conocer para inicia, dar seguimiento y concluir tu Modelo de Educación Dual.\nSi estas en tiempo para iniciarlo, empieza ya, no lo dejes para el último momento.",
+            textAlign: TextAlign.justify,
+            style: TextStyle(
+              fontSize: 12,
+            ),
+          ),
+        )
+      ]),
     );
   }
 }
