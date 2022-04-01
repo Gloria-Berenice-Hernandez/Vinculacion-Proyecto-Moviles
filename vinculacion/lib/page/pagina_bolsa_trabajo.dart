@@ -9,24 +9,20 @@ class BolsaDeTrabajo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Bolsa de Trabajo'),
+        title: const Text('Bolsa de Trabajo'),
         backgroundColor: Colors.indigo[900],
         actions: [
           IconButton(
             onPressed: () {
               Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => PaginaInicio(),
+                builder: (context) => const PaginaInicio(),
               ));
             },
-            icon: Icon(Icons.home),
+            icon: const Icon(Icons.home),
           ),
         ],
       ),
-
-      body:
-        Text('Bolsa de Trabajo'),
-
-
+      body: const Text('Bolsa de Trabajo'),
     );
   }
 }
