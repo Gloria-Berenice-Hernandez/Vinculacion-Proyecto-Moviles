@@ -5,15 +5,21 @@ class Convocatoria extends StatelessWidget {
   String imagen;
   String texto;
 
-  Convocatoria(this.imagen, this.texto);
+  Convocatoria({required this.imagen,required this.texto});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
-          border: Border(bottom: BorderSide(color: Colors.indigo, width: 5))),
+      decoration: BoxDecoration(
+          border: Border(bottom: BorderSide(
+              color: Colors.indigo,
+              width: 8
+          ))
+      ),
+
       child: Row(
         children: [
+
           Container(
             height: 155,
             width: 155,
@@ -22,16 +28,20 @@ class Convocatoria extends StatelessWidget {
               fit: BoxFit.contain,
             ),
           ),
+
           Container(
-            decoration: const BoxDecoration(
-                border:
-                    Border(left: BorderSide(color: Colors.indigo, width: 5))),
-            padding: const EdgeInsets.all(5),
-            width: 250,
-            child: Text(
-              texto,
-              textAlign: TextAlign.justify,
-            ),
+              decoration: BoxDecoration(
+                  border: Border(left: BorderSide(
+                      color: Colors.indigo,
+                      width: 5
+                  ))
+              ),
+              padding: EdgeInsets.all(5),
+              width: 250,
+              child: Text(
+                  texto,
+                textAlign: TextAlign.justify,
+              ),
           ),
         ],
       ),

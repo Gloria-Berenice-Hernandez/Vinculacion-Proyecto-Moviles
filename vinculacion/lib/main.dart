@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-// ignore: unused_import
-import 'widget/barra_navegacion.dart';
 import 'page/pagina_inicio.dart';
 
 void main() {
@@ -13,10 +11,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Instituto Tecnologico de Ensenada',
       home: PaginaInicio(),
     );
   }
 }
+

@@ -17,10 +17,8 @@ class _PaginaInicioState extends State<PaginaInicio> {
       appBar: AppBar(
         backgroundColor: Colors.indigo[900],
         centerTitle: true,
-        title: const Text(
-          'Tecnológico Nacional de México',
-          style: TextStyle(fontSize: 16),
-        ),
+        title: Text('Tecnológico Nacional de México', style: TextStyle(fontSize: 16),),
+
       ),
     );
   }
