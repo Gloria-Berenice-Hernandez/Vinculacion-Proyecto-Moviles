@@ -6,22 +6,22 @@ import '../widget/convocatoria.dart';
 import '../widget/normativa.dart';
 
 class ModeloEducacionDual extends StatelessWidget {
-  ModeloEducacionDual({Key? key}) : super(key: key);
+  const ModeloEducacionDual({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context){
    return  Scaffold(
      appBar: AppBar(
-       title: Text('Modelo de Educación DUAL'),
+       title: const Text('Modelo de Educación DUAL'),
        backgroundColor: Colors.indigo[900],
        actions: [
          IconButton(
            onPressed: () {
              Navigator.of(context).push(MaterialPageRoute(
-               builder: (context) => PaginaInicio(),
+               builder: (context) => const PaginaInicio(),
              ));
            },
-           icon: Icon(Icons.home),
+           icon: const Icon(Icons.home),
          ),
        ],
      ),
@@ -31,8 +31,8 @@ class ModeloEducacionDual extends StatelessWidget {
        children: [
 
          Container(
-           margin: EdgeInsets.all(10),
-           child: Text('Estudiantes del Instituto Tecnológico de Ensenada del TecNM.\n\nConoce e incorporate al Modelo de Educación Dual es importante en tu formación académica-laboral.\n\nTe presentamos Lineamientos, procedimiento, formatos y lo que necesitas conocer para inicia, dar seguimiento y concluir tu Modelo de Educación Dual.\n\nSi estas en tiempo para iniciarlo, empieza ya, no lo dejes para el último momento.',
+           margin: const EdgeInsets.all(10),
+           child: const Text('Estudiantes del Instituto Tecnológico de Ensenada del TecNM.\n\nConoce e incorporate al Modelo de Educación Dual es importante en tu formación académica-laboral.\n\nTe presentamos Lineamientos, procedimiento, formatos y lo que necesitas conocer para inicia, dar seguimiento y concluir tu Modelo de Educación Dual.\n\nSi estas en tiempo para iniciarlo, empieza ya, no lo dejes para el último momento.',
              textAlign: TextAlign.justify,
              style: TextStyle(
                fontSize: 17,
@@ -44,9 +44,9 @@ class ModeloEducacionDual extends StatelessWidget {
          Container(
            alignment: Alignment.center,
            color: Colors.indigo[900],
-           margin: EdgeInsets.fromLTRB(0, 15, 0, 0),
-           padding: EdgeInsets.fromLTRB(0, 8, 0, 8),
-           child: Text('Convocatorias Abiertas',
+           margin: const EdgeInsets.fromLTRB(0, 15, 0, 0),
+           padding: const EdgeInsets.fromLTRB(0, 8, 0, 8),
+           child: const Text('Convocatorias Abiertas',
              style: TextStyle(
                fontSize: 25,
                color: Colors.white,
@@ -75,7 +75,7 @@ class ModeloEducacionDual extends StatelessWidget {
              imagen: 'assets/images/masprint.jpg',
              texto: 'Empresa: MAS PRINT\n\nEstudiante de la carrera: Ingeniería en Gestión Empresarial - Administración\n\nObjetivo del Proyecto: Debido a que se cuenta con el Objetivo de contar con la Documentación que permita la estandarización de los procesos y la calidad del mismo.'),
 
-         Normativa(),
+         const Normativa(),
 
 
 

@@ -1,26 +1,21 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class Convocatoria extends StatelessWidget {
   String imagen;
   String texto;
 
-  Convocatoria({required this.imagen,required this.texto});
+  Convocatoria({Key? key, required this.imagen, required this.texto})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
-          border: Border(bottom: BorderSide(
-              color: Colors.indigo,
-              width: 8
-          ))
-      ),
-
+      decoration: const BoxDecoration(
+          border: Border(bottom: BorderSide(color: Colors.indigo, width: 8))),
       child: Row(
         children: [
-
-          Container(
+          SizedBox(
             height: 155,
             width: 155,
             child: Image(
@@ -28,20 +23,16 @@ class Convocatoria extends StatelessWidget {
               fit: BoxFit.contain,
             ),
           ),
-
           Container(
-              decoration: BoxDecoration(
-                  border: Border(left: BorderSide(
-                      color: Colors.indigo,
-                      width: 5
-                  ))
-              ),
-              padding: EdgeInsets.all(5),
-              width: 250,
-              child: Text(
-                  texto,
-                textAlign: TextAlign.justify,
-              ),
+            decoration: const BoxDecoration(
+                border:
+                    Border(left: BorderSide(color: Colors.indigo, width: 5))),
+            padding: const EdgeInsets.all(5),
+            width: 250,
+            child: Text(
+              texto,
+              textAlign: TextAlign.justify,
+            ),
           ),
         ],
       ),
