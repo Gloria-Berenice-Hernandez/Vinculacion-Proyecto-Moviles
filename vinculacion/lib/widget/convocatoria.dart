@@ -1,3 +1,5 @@
+// ignore_for_file: sized_box_for_whitespace
+
 import 'dart:io';
 
 // ignore: unnecessary_import
@@ -20,6 +22,7 @@ class Convocatoria extends StatelessWidget {
     return Container(
       decoration: const BoxDecoration(
           border:
+              // ignore: unnecessary_const
               const Border(bottom: BorderSide(color: Colors.indigo, width: 8))),
       child: Row(
         children: [
@@ -40,6 +43,7 @@ class Convocatoria extends StatelessWidget {
           ),
           Container(
             decoration: const BoxDecoration(
+                // ignore: unnecessary_const
                 border: const Border(
                     left: BorderSide(color: Colors.indigo, width: 5))),
             padding: const EdgeInsets.all(5),
