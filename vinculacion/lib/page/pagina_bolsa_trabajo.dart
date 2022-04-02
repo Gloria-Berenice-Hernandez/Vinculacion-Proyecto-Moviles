@@ -9,36 +9,26 @@ class BolsaDeTrabajo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Bolsa de Trabajo'),
-        backgroundColor: Colors.indigo[900],
-        actions: [
-          IconButton(
-            onPressed: () {
-              Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => PaginaInicio(),
-              ));
-            },
-            icon: Icon(Icons.home),
-          ),
-        ],
-      ),
-
-      body:
-        ListView(
-          children: [
-
-            BolsaDeTrabajoImagen('assets/images/VACANTES.1.jpg'),
-
-            BolsaDeTrabajoImagen('assets/images/VACANTES.2022.1.jpg'),
-
-            BolsaDeTrabajoImagen('assets/images/VACANTES-2022.jpg'),
-
-
+        appBar: AppBar(
+          title: const Text('Bolsa de Trabajo'),
+          backgroundColor: Colors.indigo[900],
+          actions: [
+            IconButton(
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const PaginaInicio(),
+                ));
+              },
+              icon: const Icon(Icons.home),
+            ),
           ],
-        )
-
-
-    );
+        ),
+        body: ListView(
+          children: [
+            BolsaDeTrabajoImagen('assets/images/VACANTES.1.jpg'),
+            BolsaDeTrabajoImagen('assets/images/VACANTES.2022.1.jpg'),
+            BolsaDeTrabajoImagen('assets/images/VACANTES-2022.jpg'),
+          ],
+        ));
   }
 }
