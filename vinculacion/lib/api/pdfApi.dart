@@ -5,7 +5,8 @@ import 'dart:io';
 
 import 'package:path_provider/path_provider.dart';
 
-class PdfApi {
+// ignore: camel_case_types
+class pdfapi {
   static Future<File> loadAsset(String path) async {
     final data = await rootBundle.load(path);
     final bytes = data.buffer.asUint8List();

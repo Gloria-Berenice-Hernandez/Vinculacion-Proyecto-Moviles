@@ -5,7 +5,7 @@ import 'dart:io';
 // ignore: unnecessary_import
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:vinculacion/api/pdfApi.dart';
+import 'package:vinculacion/api/pdfapi.dart';
 import 'package:vinculacion/page/PdfViewer.dart';
 
 // ignore: must_be_immutable
@@ -29,7 +29,7 @@ class Convocatoria extends StatelessWidget {
           InkWell(
             onTap: () async {
               final path = pdf;
-              final file = await PdfApi.loadAsset(path);
+              final file = await pdfapi.loadAsset(path);
               openPdf(context, file);
             },
             child: Container(
