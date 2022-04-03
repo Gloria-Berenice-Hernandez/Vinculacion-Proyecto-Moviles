@@ -5,8 +5,8 @@ import 'dart:io';
 // ignore: unnecessary_import
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:vinculacion/api/pdfApi.dart';
-import 'package:vinculacion/page/PdfViewer.dart';
+import 'package:vinculacion/api/pdf_api.dart';
+import 'package:vinculacion/page/pdf_viewer.dart';
 
 // ignore: must_be_immutable
 class Convocatoria extends StatelessWidget {
