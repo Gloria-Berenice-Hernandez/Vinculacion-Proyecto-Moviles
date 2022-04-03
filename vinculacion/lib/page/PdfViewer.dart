@@ -1,4 +1,3 @@
-// ignore: file_names
 import 'dart:io';
 
 import 'package:flutter/material.dart';
