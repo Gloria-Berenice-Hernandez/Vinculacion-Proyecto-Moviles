@@ -1,5 +1,8 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:vinculacion/api/pdfApi.dart';
+import 'package:vinculacion/page/PdfViewer.dart';
 
 class Normativa extends StatelessWidget {
   const Normativa({Key? key}) : super(key: key);
@@ -10,22 +13,40 @@ class Normativa extends StatelessWidget {
       children: [
         Container(
             margin: const EdgeInsets.all(12),
-            child: const Text(
-              'Normatividad',
-              style: TextStyle(fontSize: 22),
-            )),
-        Container(
-          margin: const EdgeInsets.all(12),
-          child: InkWell(
-            onTap: () => launch(
-                'https://www.ensenada.tecnm.mx/wp-content/uploads/2021/08/MODELO-DUAL-2015-TecNM.pdf'),
-            child: const Text(
-              '• Modelo de Educación Dual para nivel licenciatura del Tecnológico Nacional de México (MEDTecNM)',
-              style: TextStyle(color: Colors.indigo),
-            ),
-          ),
+            child: Text('Normatividad',
+              style: TextStyle(
+                  fontSize: 26,
+                color: Colors.indigo[900],
+                fontWeight: FontWeight.bold
+              ),
+            )
         ),
+
+        Container(
+            margin: const EdgeInsets.all(10),
+            child:
+            InkWell(
+              onTap: () async{
+                const path = 'assets/pdfs/presentacion.pdf';
+                final file = await PdfApi.loadAsset(path);
+                openPdf(context,file);
+              },
+              child: const Text('• Modelo de Educación Dual para nivel licenciatura del Tecnológico Nacional de México (MEDTecNM)',
+                textAlign: TextAlign.justify,
+                style: TextStyle(
+                    color: Colors.indigo,
+                ),
+              ),
+            ),
+
+        ),
+
+
       ],
     );
+  }
+
+  void openPdf(BuildContext context, File file) {
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => PdfViewerPage(file: file)));
   }
 }
