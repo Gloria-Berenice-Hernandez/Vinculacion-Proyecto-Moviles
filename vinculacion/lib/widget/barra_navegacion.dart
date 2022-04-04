@@ -22,31 +22,6 @@ class BarraNavegacion extends StatelessWidget {
               texto: 'Inicio',
               itemPresionado: () => itemSeleccionado(context, 0),
             ),
-            const ExpansionTile(
-              title: Text('Nosotros', style: TextStyle(color: Colors.white)),
-              children: [],
-            ),
-            const ExpansionTile(
-              title: Text('Oferta Educativa',
-                  style: TextStyle(color: Colors.white)),
-              children: [],
-            ),
-            const ExpansionTile(
-              title: Text('Estudiantes', style: TextStyle(color: Colors.white)),
-              children: [],
-            ),
-            const ExpansionTile(
-              title: Text('Aspirantes', style: TextStyle(color: Colors.white)),
-              children: [],
-            ),
-            const ExpansionTile(
-              title: Text('Docente', style: TextStyle(color: Colors.white)),
-              children: [],
-            ),
-            ItemMenu(
-              texto: 'Convocatorias',
-              itemPresionado: () => itemSeleccionado(context, 0),
-            ),
             ExpansionTile(
               title: const Text('Vinculación',
                   style: TextStyle(color: Colors.white)),
@@ -60,15 +35,6 @@ class BarraNavegacion extends StatelessWidget {
                   itemPresionado: () => itemSeleccionado(context, 8),
                 ),
               ],
-            ),
-            const ExpansionTile(
-              title: Text('Sistemas de Gestión',
-                  style: TextStyle(color: Colors.white)),
-              children: [],
-            ),
-            const ExpansionTile(
-              title: Text('Sistemas', style: TextStyle(color: Colors.white)),
-              children: [],
             ),
           ],
         ),
