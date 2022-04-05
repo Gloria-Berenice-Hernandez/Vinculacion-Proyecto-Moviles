@@ -27,24 +27,29 @@ class ModeloEducacionDual extends StatelessWidget {
       ),
       body: ListView(
         children: [
-
           Container(
-            margin: EdgeInsets.all(15),
-            child: Text('Estudiantes del Instituto Tecnológico de Ensenada del TecNM.',
-              style: TextStyle(color: Colors.indigo[900],fontSize: 20, fontWeight: FontWeight.bold),
+            margin: const EdgeInsets.all(15),
+            child: Text(
+              'Estudiantes del Instituto Tecnológico de Ensenada del TecNM.',
+              style: TextStyle(
+                  color: Colors.indigo[900],
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
             ),
           ),
-
           Container(
-            margin: EdgeInsets.fromLTRB(70, 5, 70, 10),
-            child: Text('Conoce e incorporate al Modelo de Educación Dual es importante '
-                'en tu formación académica-laboral.',
-              style: TextStyle(fontSize: 16, color: Colors.black, fontFamily: 'Times New Roman'),
+            margin: const EdgeInsets.fromLTRB(70, 5, 70, 10),
+            child: const Text(
+              'Conoce e incorporate al Modelo de Educación Dual es importante '
+              'en tu formación académica-laboral.',
+              style: TextStyle(
+                  fontSize: 16,
+                  color: Colors.black,
+                  fontFamily: 'Times New Roman'),
               textAlign: TextAlign.center,
             ),
           ),
-
           Container(
             alignment: Alignment.center,
             color: Colors.indigo[900],
@@ -59,59 +64,48 @@ class ModeloEducacionDual extends StatelessWidget {
               ),
             ),
           ),
-
-
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
               children: [
-
-                Convocatoria(
-                    empresa: 'BERRYMEX, S. DE R.L. DE C.V.',
-                    carreras: ["Ingeniería en Industrial"],
-                    pdf: 'assets/pdfs/Practicante-ITE.pdf',
-                ),
-
                 Convocatoria(
                   empresa: 'BERRYMEX, S. DE R.L. DE C.V.',
-                  carreras: ["Ingeniería en Industrial","I.G.E.","Administración"],
+                  carreras: const ["Ingeniería en Industrial"],
+                  pdf: 'assets/pdfs/Practicante-ITE.pdf',
+                ),
+                Convocatoria(
+                  empresa: 'BERRYMEX, S. DE R.L. DE C.V.',
+                  carreras: const [
+                    "Ingeniería en Industrial",
+                    "I.G.E.",
+                    "Administración"
+                  ],
                   pdf: 'assets/pdfs/Solicitud-de-Estudiante-DUAL-RH.pdf',
                 ),
-
                 Convocatoria(
                   empresa: 'BERRYMEX, S. DE R.L. DE C.V.',
-                  carreras: ["Ingeniería en Industrial","I.G.E."],
+                  carreras: const ["Ingeniería en Industrial", "I.G.E."],
                   pdf: 'assets/pdfs/Solicitud-Berrymex.pdf',
                 ),
-
                 Convocatoria(
                   empresa: 'MAS PRINT',
-                  carreras: ["Ingeniería en Industrial","Administración"],
+                  carreras: const [
+                    "Ingeniería en Industrial",
+                    "Administración"
+                  ],
                   pdf: 'assets/pdfs/SolicitudMasPrint.pdf',
                 ),
-
                 Convocatoria(
                   empresa: 'MAS PRINT',
-                  carreras: ["I.G.E.","Administración"],
+                  carreras: const ["I.G.E.", "Administración"],
                   pdf: 'assets/pdfs/Solicitud-MAS-PRINT-Facturacion.pdf',
                 ),
-
-
-
               ],
             ),
           ),
-
-
-
-
-
-
-
           const Normativa(),
         ],
       ),
     );
   }
-
 }
