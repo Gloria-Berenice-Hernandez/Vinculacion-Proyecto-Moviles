@@ -8,23 +8,29 @@ class Normativa extends StatelessWidget {
     return Column(
       children: [
         Container(
-            margin: const EdgeInsets.all(12),
-            child: Text(
-              'Normatividad',
-              style: TextStyle(
-                  fontSize: 26,
-                  color: Colors.indigo[900],
-                  fontWeight: FontWeight.bold),
-            )),
+          alignment: Alignment.center,
+          color: Colors.indigo[900],
+          margin: const EdgeInsets.fromLTRB(0, 35, 0, 15),
+          padding: const EdgeInsets.fromLTRB(0, 5, 0, 8),
+          child: const Text(
+            'Normatividad',
+            style: TextStyle(
+              fontSize: 20,
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+
         Container(
-          margin: const EdgeInsets.all(10),
+          margin: const EdgeInsets.fromLTRB(35,0,35,0),
           child: InkWell(
             onTap: () => {print('ABRIR PDF')},
             child: const Text(
               '• Modelo de Educación Dual para nivel licenciatura del Tecnológico Nacional de México (MEDTecNM)',
-              textAlign: TextAlign.justify,
+              textAlign: TextAlign.center,
               style: TextStyle(
-                color: Colors.indigo,
+                color: Color.fromRGBO(40, 62, 185, 0.8),
               ),
             ),
           ),

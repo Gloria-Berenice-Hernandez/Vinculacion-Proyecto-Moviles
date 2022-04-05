@@ -27,28 +27,31 @@ class ModeloEducacionDual extends StatelessWidget {
       ),
       body: ListView(
         children: [
+
           Container(
-            margin: const EdgeInsets.all(10),
-            child: const Text(
-              'Estudiantes del Instituto Tecnológico de Ensenada del TecNM.\n\n'
-              'Conoce e incorporate al Modelo de Educación Dual es importante '
-              'en tu formación académica-laboral.\n\nTe presentamos Lineamientos, '
-              'procedimiento, formatos y lo que necesitas conocer para inicia, dar '
-              'seguimiento y concluir tu Modelo de Educación Dual.\n\nSi estas en '
-              'tiempo para iniciarlo, empieza ya, no lo dejes para el último momento.',
-              textAlign: TextAlign.justify,
-              style: TextStyle(
-                fontSize: 17,
-              ),
+            margin: EdgeInsets.all(15),
+            child: Text('Estudiantes del Instituto Tecnológico de Ensenada del TecNM.',
+              style: TextStyle(color: Colors.indigo[900],fontSize: 20, fontWeight: FontWeight.bold),
+              textAlign: TextAlign.center,
             ),
           ),
+
+          Container(
+            margin: EdgeInsets.fromLTRB(70, 5, 70, 10),
+            child: Text('Conoce e incorporate al Modelo de Educación Dual es importante '
+                'en tu formación académica-laboral.',
+              style: TextStyle(fontSize: 16, color: Colors.black, fontFamily: 'Times New Roman'),
+              textAlign: TextAlign.center,
+            ),
+          ),
+
           Container(
             alignment: Alignment.center,
             color: Colors.indigo[900],
             margin: const EdgeInsets.fromLTRB(0, 15, 0, 0),
             padding: const EdgeInsets.fromLTRB(0, 8, 0, 8),
             child: const Text(
-              'Convocatorias Abiertas',
+              'Convocatorias Disponibles',
               style: TextStyle(
                 fontSize: 25,
                 color: Colors.white,
@@ -58,10 +61,50 @@ class ModeloEducacionDual extends StatelessWidget {
           ),
 
 
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
 
-          Convocatorias(
-              imagen: 'assets/images/berrymexlogocompleto.png',
-              pdf: 'assets/pdfs/Practicante-ITE.pdf'),
+                Convocatoria(
+                    empresa: 'BERRYMEX, S. DE R.L. DE C.V.',
+                    carreras: ["Ingeniería en Industrial"],
+                    pdf: 'assets/pdfs/Practicante-ITE.pdf',
+                ),
+
+                Convocatoria(
+                  empresa: 'BERRYMEX, S. DE R.L. DE C.V.',
+                  carreras: ["Ingeniería en Industrial","I.G.E.","Administración"],
+                  pdf: 'assets/pdfs/Solicitud-de-Estudiante-DUAL-RH.pdf',
+                ),
+
+                Convocatoria(
+                  empresa: 'BERRYMEX, S. DE R.L. DE C.V.',
+                  carreras: ["Ingeniería en Industrial","I.G.E."],
+                  pdf: 'assets/pdfs/Solicitud-Berrymex.pdf',
+                ),
+
+                Convocatoria(
+                  empresa: 'MAS PRINT',
+                  carreras: ["Ingeniería en Industrial","Administración"],
+                  pdf: 'assets/pdfs/SolicitudMasPrint.pdf',
+                ),
+
+                Convocatoria(
+                  empresa: 'MAS PRINT',
+                  carreras: ["I.G.E.","Administración"],
+                  pdf: 'assets/pdfs/Solicitud-MAS-PRINT-Facturacion.pdf',
+                ),
+
+
+
+              ],
+            ),
+          ),
+
+
+
+
 
 
 
