@@ -1,12 +1,5 @@
-// ignore_for_file: sized_box_for_whitespace
-
-import 'dart:io';
-
-// ignore: unnecessary_import
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:vinculacion/api/pdf_api.dart';
-import 'package:vinculacion/page/pdf_viewer.dart';
+
 
 // ignore: must_be_immutable
 class Convocatoria extends StatelessWidget {
@@ -27,11 +20,7 @@ class Convocatoria extends StatelessWidget {
       child: Row(
         children: [
           InkWell(
-            onTap: () async {
-              final path = pdf;
-              final file = await PdfApi.loadAsset(path);
-              openPdf(context, file);
-            },
+            onTap: () => {print("Abrir PDF")},
             child: Container(
               height: 155,
               width: 155,
@@ -58,8 +47,5 @@ class Convocatoria extends StatelessWidget {
     );
   }
 
-  void openPdf(BuildContext context, File file) {
-    Navigator.of(context).push(
-        MaterialPageRoute(builder: (context) => PdfViewerPage(file: file)));
-  }
+
 }

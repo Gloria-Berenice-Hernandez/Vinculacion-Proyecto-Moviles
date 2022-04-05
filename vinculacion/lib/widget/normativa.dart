@@ -1,8 +1,4 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
-import 'package:vinculacion/api/pdf_api.dart';
-import 'package:vinculacion/page/pdf_viewer.dart';
 
 class Normativa extends StatelessWidget {
   const Normativa({Key? key}) : super(key: key);
@@ -23,11 +19,7 @@ class Normativa extends StatelessWidget {
         Container(
           margin: const EdgeInsets.all(10),
           child: InkWell(
-            onTap: () async {
-              const path = 'assets/pdfs/presentacion.pdf';
-              final file = await PdfApi.loadAsset(path);
-              openPdf(context, file);
-            },
+            onTap: () => {print('ABRIR PDF')},
             child: const Text(
               '• Modelo de Educación Dual para nivel licenciatura del Tecnológico Nacional de México (MEDTecNM)',
               textAlign: TextAlign.justify,
@@ -41,8 +33,5 @@ class Normativa extends StatelessWidget {
     );
   }
 
-  void openPdf(BuildContext context, File file) {
-    Navigator.of(context).push(
-        MaterialPageRoute(builder: (context) => PdfViewerPage(file: file)));
-  }
+
 }

@@ -3,7 +3,6 @@ import '../page/pagina_modelo_dual.dart';
 import '../page/pagina_inicio.dart';
 import '../page/pagina_bolsa_trabajo.dart';
 
-// ignore: use_key_in_widget_constructors
 class BarraNavegacion extends StatelessWidget {
   final padding = const EdgeInsets.symmetric(horizontal: 5);
 
