@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:vinculacion/widget/normativa.dart';
 
 import '../page/pagina_inicio.dart';
-import '../widget/convocatoria.dart';
+import '../widget/convocatorias.dart';
 import '../widget/normativa.dart';
 
 class ModeloEducacionDual extends StatelessWidget {
@@ -56,46 +56,19 @@ class ModeloEducacionDual extends StatelessWidget {
               ),
             ),
           ),
-          Convocatoria(
+
+
+
+          Convocatorias(
               imagen: 'assets/images/berrymexlogocompleto.png',
-              texto: 'Empresa: BERRYMEX, S. DE R.L. DE C.V.\n\n'
-                  'Estudiante de: Ingenieria Industrial\n\n'
-                  'Objetivo del Proyecto: Debido a que se cuenta '
-                  'con el Objetivo de contar con la Documentación '
-                  'que permita la estandarización de los procesos y la calidad del mismo.',
               pdf: 'assets/pdfs/Practicante-ITE.pdf'),
-          Convocatoria(
-              imagen: 'assets/images/berrymexlogocompleto.png',
-              texto: 'Empresa: BERRYMEX, S. DE R.L. DE C.V.\n\n'
-                  'Estudiante de la carrera: Ingeniería en Industrial - IGE - Administración\n\n'
-                  'Objetivo del Proyecto: Debido a que se cuenta con el Objetivo de contar con la '
-                  'Documentación que permita la estandarización de los procesos y la calidad del mismo.',
-              pdf: 'assets/pdfs/Solicitud-de-Estudiante-DUAL-RH.pdf'),
-          Convocatoria(
-              imagen: 'assets/images/berrymexlogocompleto.png',
-              texto: 'Empresa: BERRYMEX, S. DE R.L. DE C.V.\n\n'
-                  'Estudiante de la carrera: Ingeniería en Industrial - IGE\n\n'
-                  'Objetivo del Proyecto: Debido a que se cuenta con '
-                  'el Objetivo de contar con la Documentación que permita '
-                  'la estandarización de los procesos y la calidad del mismo.',
-              pdf: 'assets/pdfs/Solicitud-Berrymex.pdf'),
-          Convocatoria(
-              imagen: 'assets/images/masprint.jpg',
-              texto: 'Empresa: MAS PRINT\n\n'
-                  'Estudiante de la carrera: Ingeniería en Industrial - Administración\n\n'
-                  'Objetivo del Proyecto: Debido a que se cuenta con el Objetivo de contar '
-                  'con la Documentación que permita la estandarización de los procesos y la calidad del mismo.',
-              pdf: 'assets/pdfs/SolicitudMasPrint.pdf'),
-          Convocatoria(
-              imagen: 'assets/images/masprint.jpg',
-              texto: 'Empresa: MAS PRINT\n\n'
-                  'Estudiante de la carrera: Ingeniería en Gestión Empresarial - Administración\n\n'
-                  'Objetivo del Proyecto: Debido a que se cuenta con el Objetivo de contar con la Do'
-                  'cumentación que permita la estandarización de los procesos y la calidad del mismo.',
-              pdf: 'assets/pdfs/Solicitud-MAS-PRINT-Facturacion.pdf'),
+
+
+
           const Normativa(),
         ],
       ),
     );
   }
+
 }
