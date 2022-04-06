@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
+import 'dart:convert';
 import 'package:vinculacion/widget/normativa.dart';
-
 import '../page/pagina_inicio.dart';
 import '../widget/convocatorias.dart';
 import '../widget/normativa.dart';
+
+String informacion =
+    '{"titulo1":"Estudiantes del Instituto Tecnológico de Ensenada del TecNM.","titulo2":"Conoce e incorporate al Modelo de Educación Dual es importante en tu formación académica-laboral."}';
+
+Map<String, dynamic> mapa = jsonDecode(informacion);
 
 class ModeloEducacionDual extends StatelessWidget {
   const ModeloEducacionDual({Key? key}) : super(key: key);
@@ -30,7 +35,8 @@ class ModeloEducacionDual extends StatelessWidget {
           Container(
             margin: const EdgeInsets.all(15),
             child: Text(
-              'Estudiantes del Instituto Tecnológico de Ensenada del TecNM.',
+              /*'Estudiantes del Instituto Tecnológico de Ensenada del TecNM.'*/ mapa[
+                  'titulo1'],
               style: TextStyle(
                   color: Colors.indigo[900],
                   fontSize: 20,
