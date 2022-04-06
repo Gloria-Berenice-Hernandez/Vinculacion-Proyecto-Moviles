@@ -10,7 +10,11 @@ class BolsaDeTrabajo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Bolsa de Trabajo'),
+          toolbarHeight: 60,
+          title: const Text(
+            'Bolsa de Trabajo',
+            style: TextStyle(fontFamily: 'Alfa_Slab_One'),
+          ),
           backgroundColor: Colors.indigo[900],
           actions: [
             IconButton(

@@ -15,21 +15,23 @@ class Normativa extends StatelessWidget {
           child: const Text(
             'Normatividad',
             style: TextStyle(
-              fontSize: 20,
+              fontSize: 26,
+              fontFamily: 'Anton',
               color: Colors.white,
               fontWeight: FontWeight.bold,
             ),
           ),
         ),
-
         Container(
-          margin: const EdgeInsets.fromLTRB(35,0,35,0),
+          margin: const EdgeInsets.fromLTRB(35, 0, 35, 0),
           child: InkWell(
             onTap: () => {print('ABRIR PDF')},
             child: const Text(
               '• Modelo de Educación Dual para nivel licenciatura del Tecnológico Nacional de México (MEDTecNM)',
               textAlign: TextAlign.center,
               style: TextStyle(
+                fontSize: 14,
+                fontFamily: 'Andika',
                 color: Color.fromRGBO(40, 62, 185, 0.8),
               ),
             ),
@@ -38,6 +40,4 @@ class Normativa extends StatelessWidget {
       ],
     );
   }
-
-
 }
