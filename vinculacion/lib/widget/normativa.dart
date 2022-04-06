@@ -25,6 +25,7 @@ class Normativa extends StatelessWidget {
         Container(
           margin: const EdgeInsets.fromLTRB(35, 0, 35, 0),
           child: InkWell(
+            // ignore: avoid_print
             onTap: () => {print('ABRIR PDF')},
             child: const Text(
               '• Modelo de Educación Dual para nivel licenciatura del Tecnológico Nacional de México (MEDTecNM)',
