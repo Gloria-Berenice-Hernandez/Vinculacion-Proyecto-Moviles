@@ -61,7 +61,7 @@ class BarraNavegacion extends StatelessWidget {
     switch (indice) {
       case 7:
         Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => const ModeloEducacionDual(),
+          builder: (context) => ModeloEducacionDual(),
         ));
         break;
 

@@ -1,4 +1,34 @@
 {
-    "info1" : "Estudiantes del Instituto Tecnológico de Ensenada del TecNM.",
-    "info2" : "Conoce e incorporate al Modelo de Educación Dual es importante en tu formación académica-laboral."
+    "convocatorias": [
+        {
+            "empresa": "BERRYMEX, S. DE R.L. DE C.V.",
+            "carreras": ["Ingenieria en Industrial"],
+            "objetivo": "Debido a que se cuenta con el Objetivo de contar con la Documentación que permita la estandarización de los procesos y la calidad del mismo.",
+            "pdf": "assets/pdfs/Practicante-ITE.pdf"
+        },
+        {
+            "empresa": "BERRYMEX, S. DE R.L. DE C.V.",
+            "carreras": ["Ingenieria en Industrial","I.G.E.","Administración"],
+            "objetivo": "Debido a que se cuenta con el Objetivo de contar con la Documentación que permita la estandarización de los procesos y la calidad del mismo.",
+            "pdf": "assets/pdfs/Solicitud-de-Estudiante-DUAL-RH.pdf"
+        },
+        {
+            "empresa": "BERRYMEX, S. DE R.L. DE C.V.",
+            "carreras": ["Ingenieria en Industrial","I.G.E."],
+            "objetivo": "Debido a que se cuenta con el Objetivo de contar con la Documentación que permita la estandarización de los procesos y la calidad del mismo.",
+            "pdf": "assets/pdfs/Solicitud-Berrymex.pdf"
+        },
+        {
+            "empresa": "MAS PRINT",
+            "carreras": ["Ingenieria en Industrial","Administración"],
+            "objetivo": "Debido a que se cuenta con el Objetivo de contar con la Documentación que permita la estandarización de los procesos y la calidad del mismo.",
+            "pdf": "assets/pdfs/SolicitudMasPrint.pdf"
+        },
+        {
+            "empresa": "MAS PRINT",
+            "carreras": ["I.G.E.","Administración"],
+            "objetivo": "Debido a que se cuenta con el Objetivo de contar con la Documentación que permita la estandarización de los procesos y la calidad del mismo.",
+            "pdf": "assets/pdfs/Solicitud-MAS-PRINT-Facturacion.pdf"
+        }
+    ]
 }

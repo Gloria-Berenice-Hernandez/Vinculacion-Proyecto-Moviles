@@ -1,20 +1,37 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'dart:convert';
 import 'package:vinculacion/widget/normativa.dart';
 import '../page/pagina_inicio.dart';
 import '../widget/convocatorias.dart';
 import '../widget/normativa.dart';
 
-String informacion =
-    '{"titulo1":"Estudiantes del Instituto Tecnológico de Ensenada del TecNM.","titulo2":"Conoce e incorporate al Modelo de Educación Dual es importante en tu formación académica-laboral."}';
-
-Map<String, dynamic> mapa = jsonDecode(informacion);
-
-class ModeloEducacionDual extends StatelessWidget {
-  const ModeloEducacionDual({Key? key}) : super(key: key);
+class ModeloEducacionDual extends StatefulWidget {
+  ModeloEducacionDual({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  State<ModeloEducacionDual> createState() => _ModeloEducacionDualState();
+}
+
+class _ModeloEducacionDualState extends State<ModeloEducacionDual> {
+  List convocatorias = [];
+
+  void initState(){
+    super.initState();
+    WidgetsBinding.instance!.addPostFrameCallback((_) => leerJson(context));
+  }
+
+  Future<void> leerJson(BuildContext context) async{
+    final String datosLeidos =
+        await rootBundle.loadString('data/json_info.json');
+    final datosDecodificados = await json.decode(datosLeidos);
+    setState(() {
+      convocatorias = datosDecodificados["convocatorias"];
+      print(convocatorias);
+    });
+  }
+
+  @override  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Modelo de Educación DUAL'),
@@ -35,8 +52,7 @@ class ModeloEducacionDual extends StatelessWidget {
           Container(
             margin: const EdgeInsets.all(15),
             child: Text(
-              /*'Estudiantes del Instituto Tecnológico de Ensenada del TecNM.'*/ mapa[
-                  'titulo1'],
+              'Estudiantes del Instituto Tecnológico de Ensenada del TecNM.',
               style: TextStyle(
                   color: Colors.indigo[900],
                   fontSize: 20,
@@ -70,45 +86,9 @@ class ModeloEducacionDual extends StatelessWidget {
               ),
             ),
           ),
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              children: [
-                Convocatoria(
-                  empresa: 'BERRYMEX, S. DE R.L. DE C.V.',
-                  carreras: const ["Ingeniería en Industrial"],
-                  pdf: 'assets/pdfs/Practicante-ITE.pdf',
-                ),
-                Convocatoria(
-                  empresa: 'BERRYMEX, S. DE R.L. DE C.V.',
-                  carreras: const [
-                    "Ingeniería en Industrial",
-                    "I.G.E.",
-                    "Administración"
-                  ],
-                  pdf: 'assets/pdfs/Solicitud-de-Estudiante-DUAL-RH.pdf',
-                ),
-                Convocatoria(
-                  empresa: 'BERRYMEX, S. DE R.L. DE C.V.',
-                  carreras: const ["Ingeniería en Industrial", "I.G.E."],
-                  pdf: 'assets/pdfs/Solicitud-Berrymex.pdf',
-                ),
-                Convocatoria(
-                  empresa: 'MAS PRINT',
-                  carreras: const [
-                    "Ingeniería en Industrial",
-                    "Administración"
-                  ],
-                  pdf: 'assets/pdfs/SolicitudMasPrint.pdf',
-                ),
-                Convocatoria(
-                  empresa: 'MAS PRINT',
-                  carreras: const ["I.G.E.", "Administración"],
-                  pdf: 'assets/pdfs/Solicitud-MAS-PRINT-Facturacion.pdf',
-                ),
-              ],
-            ),
-          ),
+
+          Convocatoria(convocatorias),
+
           const Normativa(),
         ],
       ),
