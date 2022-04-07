@@ -23,6 +23,7 @@ class Convocatoria extends StatelessWidget {
         children: convocatorias.map((convoc) {
           return InkWell(
             onTap: () {
+              // ignore: avoid_print
               print(
                   "Cargar PDF en: ${convocatorias[convocatorias.indexOf(convoc)]["pdf"]}");
             },

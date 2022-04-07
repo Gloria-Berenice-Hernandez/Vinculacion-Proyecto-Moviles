@@ -24,7 +24,7 @@ class _PaginaInicioState extends State<PaginaInicio> {
         children: [
 
           Container(
-            margin: EdgeInsets.all(15),
+            margin: const EdgeInsets.all(15),
             child: Text(
               'Instituto Tecnológico de Ensenada',
               style: TextStyle(
@@ -37,15 +37,15 @@ class _PaginaInicioState extends State<PaginaInicio> {
 
           Container(
             alignment: Alignment.center,
-            margin: EdgeInsets.fromLTRB(0, 10, 0, 10),
+            margin: const EdgeInsets.fromLTRB(0, 10, 0, 10),
             height: 250,
-            child: Image(
+            child: const Image(
               image: AssetImage('assets/images/logo-ensenada.png'),
               fit: BoxFit.contain,
             ),
           ),
 
-          Text(
+          const Text(
             'Propuesta para Página de Vinculación',
             style: TextStyle(
               fontSize: 15,
