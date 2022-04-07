@@ -7,7 +7,7 @@ import '../widget/convocatorias.dart';
 import '../widget/normativa.dart';
 
 class ModeloEducacionDual extends StatefulWidget {
-  ModeloEducacionDual({Key? key}) : super(key: key);
+  const ModeloEducacionDual({Key? key}) : super(key: key);
 
   @override
   State<ModeloEducacionDual> createState() => _ModeloEducacionDualState();
@@ -16,6 +16,7 @@ class ModeloEducacionDual extends StatefulWidget {
 class _ModeloEducacionDualState extends State<ModeloEducacionDual> {
   List convocatorias = [];
 
+  @override
   void initState() {
     super.initState();
     WidgetsBinding.instance!.addPostFrameCallback((_) => leerJson(context));

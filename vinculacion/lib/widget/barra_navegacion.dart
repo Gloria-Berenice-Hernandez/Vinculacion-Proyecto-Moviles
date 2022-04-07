@@ -1,3 +1,5 @@
+// ignore_for_file: use_key_in_widget_constructors
+
 import 'package:flutter/material.dart';
 import '../page/pagina_modelo_dual.dart';
 import '../page/pagina_inicio.dart';
@@ -61,7 +63,7 @@ class BarraNavegacion extends StatelessWidget {
     switch (indice) {
       case 7:
         Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => ModeloEducacionDual(),
+          builder: (context) => const ModeloEducacionDual(),
         ));
         break;
 
