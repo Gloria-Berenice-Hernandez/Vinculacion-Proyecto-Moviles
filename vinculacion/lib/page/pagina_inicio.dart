@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../widget/barra_navegacion.dart';
+import '../widget/prueba_barra.dart';
 
 class PaginaInicio extends StatefulWidget {
   const PaginaInicio({Key? key}) : super(key: key);
@@ -13,16 +14,19 @@ class _PaginaInicioState extends State<PaginaInicio> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: BarraNavegacion(),
+      //   drawer: BarraNavegacion(),
+      drawer: Prueba(),
       appBar: AppBar(
         backgroundColor: Colors.indigo[900],
         centerTitle: true,
-        title: const Text('Tecnológico Nacional de México', style: TextStyle(fontSize: 16),),
+        title: const Text(
+          'Tecnológico Nacional de México',
+          style: TextStyle(fontSize: 16),
+        ),
       ),
 
       body: Column(
         children: [
-
           Container(
             margin: const EdgeInsets.all(15),
             child: Text(
@@ -34,7 +38,6 @@ class _PaginaInicioState extends State<PaginaInicio> {
               ),
             ),
           ),
-
           Container(
             alignment: Alignment.center,
             margin: const EdgeInsets.fromLTRB(0, 10, 0, 10),
@@ -44,7 +47,6 @@ class _PaginaInicioState extends State<PaginaInicio> {
               fit: BoxFit.contain,
             ),
           ),
-
           const Text(
             'Propuesta para Página de Vinculación',
             style: TextStyle(
@@ -52,11 +54,6 @@ class _PaginaInicioState extends State<PaginaInicio> {
               fontWeight: FontWeight.bold,
             ),
           ),
-
-
-
-
-
         ],
       ),
     );
