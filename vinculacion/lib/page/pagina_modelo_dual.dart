@@ -28,7 +28,6 @@ class _ModeloEducacionDualState extends State<ModeloEducacionDual> {
     final datosDecodificados = await json.decode(datosLeidos);
     setState(() {
       convocatorias = datosDecodificados["convocatorias"];
-      //print(convocatorias);
     });
   }
 

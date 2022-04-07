@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import '../page/mostrar_convocatoria.dart';
 
 // ignore: must_be_immutable
 class Convocatoria extends StatelessWidget {
@@ -24,9 +25,12 @@ class Convocatoria extends StatelessWidget {
         children: convocatorias.map((convoc) {
           return InkWell(
             onTap: () {
-              // ignore: avoid_print
-              print(
-                  "Cargar PDF en: ${convocatorias[convocatorias.indexOf(convoc)]["pdf"]}");
+              Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => MostrarConvocatoria(
+                  empresa: convocatorias[convocatorias.indexOf(convoc)]["empresa"],
+                  pdf: convocatorias[convocatorias.indexOf(convoc)]["pdf"],
+                ),
+              ));
             },
             child: Container(
               margin: const EdgeInsets.fromLTRB(15, 15, 10, 50),

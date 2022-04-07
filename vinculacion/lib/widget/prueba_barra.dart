@@ -47,13 +47,8 @@ class Prueba extends StatelessWidget {
                 color: const Color.fromARGB(255, 28, 54, 149),
                 width: 300,
                 height: 50.0,
-                child: InkWell(
-                  onTap: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => const PaginaInicio(),
-                    ));
-                  },
-                  child: const Center(
+                child: const InkWell(
+                  child: Center(
                       child: Text("Vinculación",
                           style: TextStyle(
                               color: Colors.white,

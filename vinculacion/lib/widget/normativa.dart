@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../page/mostrar_presentacion.dart';
 
 class Normativa extends StatelessWidget {
   const Normativa({Key? key}) : super(key: key);
@@ -29,7 +30,14 @@ class Normativa extends StatelessWidget {
             margin: const EdgeInsets.fromLTRB(35, 0, 35, 50),
             child: InkWell(
               // ignore: avoid_print
-              onTap: () => {print('ABRIR PDF')},
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => MostrarPresentacion(
+                    titulo: 'Normatividad',
+                    pdf: 'assets/pdfs/presentacion.pdf',
+                  ),
+                ));
+              },
               child: const Text(
                 '• Modelo de Educación Dual para nivel licenciatura del Tecnológico Nacional de México (MEDTecNM)',
                 textAlign: TextAlign.center,

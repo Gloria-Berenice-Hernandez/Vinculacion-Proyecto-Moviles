@@ -32,7 +32,8 @@ dependencies:
   
   youtube_player_flutter: ^8.0.0
   url_launcher: ^6.0.20
-  carousel_slider:  ^2.2.1 
+  carousel_slider:  ^2.2.1
+  syncfusion_flutter_pdfviewer: ^20.1.47-beta
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons listaConvocatorias for iOS style icons.
