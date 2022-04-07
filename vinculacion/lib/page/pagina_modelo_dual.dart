@@ -53,39 +53,60 @@ class _ModeloEducacionDualState extends State<ModeloEducacionDual> {
       ),
       body: ListView(
         children: [
-          Container(
-            margin: const EdgeInsets.fromLTRB(40, 15, 40, 10),
+          const Padding(
+            padding: EdgeInsets.only(left: 15, top: 5, bottom: 1),
             child: Text(
-              'Estudiantes del Instituto Tecnológico de Ensenada del TecNM.',
+              'Dual',
               style: TextStyle(
-                  color: Colors.indigo[900],
-                  fontSize: 18,
-                  fontFamily: 'Andika',
-                  fontWeight: FontWeight.bold),
-              textAlign: TextAlign.center,
+                fontFamily: 'Andika',
+                color: Color.fromARGB(255, 157, 157, 167),
+                fontSize: 16,
+                fontWeight: FontWeight.w900,
+              ),
             ),
           ),
           Container(
-            margin: const EdgeInsets.fromLTRB(70, 0, 70, 10),
+            margin: const EdgeInsets.only(left: 15),
+            child: Text(
+              'Estudiante del',
+              style: TextStyle(
+                  color: Colors.indigo[900],
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold),
+              textAlign: TextAlign.left,
+            ),
+          ),
+          Container(
+            margin: const EdgeInsets.only(left: 15, top: 10),
+            child: const Text(
+              'Tecnologico de Ens.',
+              style: TextStyle(
+                  color: Colors.blue,
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold),
+              textAlign: TextAlign.left,
+            ),
+          ),
+          Container(
+            margin: const EdgeInsets.fromLTRB(15, 10, 5, 5),
             child: const Text(
               'Conoce e incorporate al Modelo de Educación Dual es importante '
               'en tu formación académica-laboral.',
               style: TextStyle(
                   fontSize: 16, color: Colors.black, fontFamily: 'Andika'),
-              textAlign: TextAlign.center,
+              textAlign: TextAlign.left,
             ),
           ),
           Container(
-            alignment: Alignment.center,
-            color: Colors.indigo[900],
-            margin: const EdgeInsets.fromLTRB(0, 15, 0, 0),
+            alignment: Alignment.bottomLeft,
+            color: Colors.transparent,
+            margin: const EdgeInsets.fromLTRB(15, 15, 0, 0),
             padding: const EdgeInsets.fromLTRB(0, 8, 0, 8),
             child: const Text(
               'Convocatorias Disponibles',
               style: TextStyle(
-                fontSize: 26,
-                fontFamily: 'Anton',
-                color: Colors.white,
+                fontSize: 20,
+                color: Color.fromARGB(255, 157, 157, 167),
                 fontWeight: FontWeight.bold,
               ),
             ),

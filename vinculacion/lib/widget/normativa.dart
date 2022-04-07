@@ -5,40 +5,44 @@ class Normativa extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Container(
-          alignment: Alignment.center,
-          color: Colors.indigo[900],
-          margin: const EdgeInsets.fromLTRB(0, 35, 0, 15),
-          padding: const EdgeInsets.fromLTRB(0, 5, 0, 8),
-          child: const Text(
-            'Normatividad',
-            style: TextStyle(
-              fontSize: 26,
-              fontFamily: 'Anton',
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        ),
-        Container(
-          margin: const EdgeInsets.fromLTRB(35, 0, 35, 0),
-          child: InkWell(
-            // ignore: avoid_print
-            onTap: () => {print('ABRIR PDF')},
+    return Container(
+      padding: const EdgeInsets.only(top: 0),
+      color: Colors.grey[200],
+      child: Column(
+        children: [
+          Container(
+            alignment: Alignment.center,
+            color: Colors.grey[200],
+            margin: const EdgeInsets.fromLTRB(0, 0, 0, 20),
             child: const Text(
-              '• Modelo de Educación Dual para nivel licenciatura del Tecnológico Nacional de México (MEDTecNM)',
-              textAlign: TextAlign.center,
+              'Normatividad',
               style: TextStyle(
-                fontSize: 14,
-                fontFamily: 'Andika',
-                color: Color.fromRGBO(40, 62, 185, 0.8),
+                fontSize: 26,
+                fontFamily: 'Anton',
+                color: Color.fromARGB(255, 26, 35, 126),
+                fontWeight: FontWeight.bold,
               ),
             ),
           ),
-        ),
-      ],
+          Container(
+            color: Colors.grey[200],
+            margin: const EdgeInsets.fromLTRB(35, 0, 35, 50),
+            child: InkWell(
+              // ignore: avoid_print
+              onTap: () => {print('ABRIR PDF')},
+              child: const Text(
+                '• Modelo de Educación Dual para nivel licenciatura del Tecnológico Nacional de México (MEDTecNM)',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 14,
+                  fontFamily: 'Andika',
+                  color: Color.fromRGBO(40, 62, 185, 0.8),
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
@@ -28,15 +29,12 @@ class Convocatoria extends StatelessWidget {
                   "Cargar PDF en: ${convocatorias[convocatorias.indexOf(convoc)]["pdf"]}");
             },
             child: Container(
-              margin: const EdgeInsets.fromLTRB(10, 25, 10, 10),
+              margin: const EdgeInsets.fromLTRB(15, 15, 10, 50),
               color: Colors.transparent,
-              width: 220,
-              height: 220,
+              width: 230,
+              height: 230,
               child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.indigo[900],
-                  borderRadius: BorderRadius.circular(40),
-                ),
+                decoration: _boxdecoration(),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   crossAxisAlignment: CrossAxisAlignment.end,
@@ -47,9 +45,8 @@ class Convocatoria extends StatelessWidget {
                       child: Text(
                         convocatorias[convocatorias.indexOf(convoc)]["empresa"],
                         style: const TextStyle(
-                          fontSize: 15,
-                          fontFamily: 'Mochiy_Pop_One',
-                          color: Colors.white,
+                          fontSize: 20,
+                          color: Color.fromARGB(255, 26, 35, 126),
                           fontWeight: FontWeight.bold,
                         ),
                         textAlign: TextAlign.center,
@@ -64,23 +61,20 @@ class Convocatoria extends StatelessWidget {
                                 ["carreras"]),
                         style: const TextStyle(
                           fontFamily: 'Imprima',
-                          fontSize: 16,
-                          color: Colors.white,
+                          fontSize: 18,
+                          color: Colors.black,
                         ),
                       ),
                     ),
                     Container(
-                      margin: const EdgeInsets.fromLTRB(0, 0, 35, 0),
-                      decoration: const BoxDecoration(
-                          color: Colors.white, shape: BoxShape.circle),
-                      child: Container(
-                          margin: const EdgeInsets.all(3),
-                          child: Text(
-                            '+',
-                            style: TextStyle(
-                                fontSize: 38, color: Colors.indigo[900]),
-                          )),
-                    ),
+                        margin: const EdgeInsets.fromLTRB(0, 0, 35, 5),
+                        decoration: const BoxDecoration(
+                            color: Colors.white, shape: BoxShape.circle),
+                        child: const Icon(
+                          CupertinoIcons.doc_on_clipboard_fill,
+                          color: Colors.blue,
+                          size: 40,
+                        )),
                   ],
                 ),
               ),
@@ -90,4 +84,13 @@ class Convocatoria extends StatelessWidget {
       ),
     );
   }
+}
+
+BoxDecoration _boxdecoration() {
+  return BoxDecoration(
+      color: Colors.white,
+      borderRadius: BorderRadius.circular(35.0),
+      boxShadow: const [
+        BoxShadow(color: Colors.black45, offset: Offset(4, 4), blurRadius: 10)
+      ]);
 }
