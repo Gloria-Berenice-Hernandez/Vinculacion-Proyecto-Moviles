@@ -87,6 +87,12 @@ flutter:
     - family: Anton
       fonts:
         - asset: fonts/Anton-Regular.ttf
+    - family: Imprima
+      fonts:
+        - asset: fonts/Imprima-Regular.ttf
+    - family: Mochiy_Pop_One
+      fonts:
+        - asset: fonts/MochiyPopOne-Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

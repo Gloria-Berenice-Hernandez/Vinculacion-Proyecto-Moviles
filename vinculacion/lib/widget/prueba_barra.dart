@@ -36,7 +36,11 @@ class Prueba extends StatelessWidget {
                   },
                   child: const Center(
                       child: Text("Inicio",
-                          style: TextStyle(color: Colors.white))),
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontFamily: 'Imprima',
+                              fontWeight: FontWeight.w900,
+                              fontSize: 20))),
                 )),
           ),
           ExpansionTile(
@@ -51,8 +55,12 @@ class Prueba extends StatelessWidget {
                     ));
                   },
                   child: const Center(
-                      child: Text("Vinculacion",
-                          style: TextStyle(color: Colors.white))),
+                      child: Text("Vinculación",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontFamily: 'Imprima',
+                              fontWeight: FontWeight.w900,
+                              fontSize: 20))),
                 )),
             children: [
               Ink(
@@ -66,8 +74,12 @@ class Prueba extends StatelessWidget {
                       ));
                     },
                     child: const Center(
-                        child: Text("Educacion Dual",
-                            style: TextStyle(color: Colors.white))),
+                        child: Text("Modelo de Educación DUAL",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontFamily: 'Imprima',
+                                fontWeight: FontWeight.w400,
+                                fontSize: 15))),
                   )),
               Ink(
                   color: const Color.fromARGB(255, 28, 54, 149),
@@ -81,7 +93,11 @@ class Prueba extends StatelessWidget {
                     },
                     child: const Center(
                         child: Text("Bolsa de Trabajo",
-                            style: TextStyle(color: Colors.white))),
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontFamily: 'Imprima',
+                                fontWeight: FontWeight.w400,
+                                fontSize: 15))),
                   )),
             ],
           ),

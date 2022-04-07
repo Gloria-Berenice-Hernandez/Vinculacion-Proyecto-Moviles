@@ -17,11 +17,12 @@ class _PaginaInicioState extends State<PaginaInicio> {
       //   drawer: BarraNavegacion(),
       drawer: Prueba(),
       appBar: AppBar(
+        toolbarHeight: 60,
         backgroundColor: Colors.indigo[900],
         centerTitle: true,
         title: const Text(
           'Tecnológico Nacional de México',
-          style: TextStyle(fontSize: 16),
+          style: TextStyle(fontSize: 16, fontFamily: 'Alfa_Slab_One'),
         ),
       ),
 
@@ -32,6 +33,7 @@ class _PaginaInicioState extends State<PaginaInicio> {
             child: Text(
               'Instituto Tecnológico de Ensenada',
               style: TextStyle(
+                fontFamily: 'Andika',
                 color: Colors.indigo[900],
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
@@ -40,7 +42,7 @@ class _PaginaInicioState extends State<PaginaInicio> {
           ),
           Container(
             alignment: Alignment.center,
-            margin: const EdgeInsets.fromLTRB(0, 10, 0, 10),
+            margin: const EdgeInsets.fromLTRB(0, 10, 0, 15),
             height: 250,
             child: const Image(
               image: AssetImage('assets/images/logo-ensenada.png'),
@@ -50,6 +52,7 @@ class _PaginaInicioState extends State<PaginaInicio> {
           const Text(
             'Propuesta para Página de Vinculación',
             style: TextStyle(
+              fontFamily: 'Andika',
               fontSize: 15,
               fontWeight: FontWeight.bold,
             ),

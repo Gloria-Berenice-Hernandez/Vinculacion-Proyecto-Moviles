@@ -47,7 +47,8 @@ class Convocatoria extends StatelessWidget {
                       child: Text(
                         convocatorias[convocatorias.indexOf(convoc)]["empresa"],
                         style: const TextStyle(
-                          fontSize: 20,
+                          fontSize: 15,
+                          fontFamily: 'Mochiy_Pop_One',
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
                         ),
@@ -62,6 +63,7 @@ class Convocatoria extends StatelessWidget {
                             convocatorias[convocatorias.indexOf(convoc)]
                                 ["carreras"]),
                         style: const TextStyle(
+                          fontFamily: 'Imprima',
                           fontSize: 16,
                           color: Colors.white,
                         ),

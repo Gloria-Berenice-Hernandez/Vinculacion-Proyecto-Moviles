@@ -2,30 +2,30 @@
     "convocatorias": [
         {
             "empresa": "BERRYMEX, S. DE R.L. DE C.V.",
-            "carreras": ["Ingenieria en Industrial"],
+            "carreras": ["Ingeniería en Industrial"],
             "objetivo": "Debido a que se cuenta con el Objetivo de contar con la Documentación que permita la estandarización de los procesos y la calidad del mismo.",
             "pdf": "assets/pdfs/Practicante-ITE.pdf"
         },
         {
             "empresa": "BERRYMEX, S. DE R.L. DE C.V.",
-            "carreras": ["Ingenieria en Industrial","I.G.E.","Administración"],
+            "carreras": ["Ingeniería en Industrial","I.G.E.","Administración"],
             "objetivo": "Debido a que se cuenta con el Objetivo de contar con la Documentación que permita la estandarización de los procesos y la calidad del mismo.",
             "pdf": "assets/pdfs/Solicitud-de-Estudiante-DUAL-RH.pdf"
         },
         {
             "empresa": "BERRYMEX, S. DE R.L. DE C.V.",
-            "carreras": ["Ingenieria en Industrial","I.G.E."],
+            "carreras": ["Ingeniería en Industrial","I.G.E."],
             "objetivo": "Debido a que se cuenta con el Objetivo de contar con la Documentación que permita la estandarización de los procesos y la calidad del mismo.",
             "pdf": "assets/pdfs/Solicitud-Berrymex.pdf"
         },
         {
-            "empresa": "MAS PRINT",
-            "carreras": ["Ingenieria en Industrial","Administración"],
+            "empresa": "MÁS PRINT",
+            "carreras": ["Ingeniería en Industrial","Administración"],
             "objetivo": "Debido a que se cuenta con el Objetivo de contar con la Documentación que permita la estandarización de los procesos y la calidad del mismo.",
             "pdf": "assets/pdfs/SolicitudMasPrint.pdf"
         },
         {
-            "empresa": "MAS PRINT",
+            "empresa": "MÁS PRINT",
             "carreras": ["I.G.E.","Administración"],
             "objetivo": "Debido a que se cuenta con el Objetivo de contar con la Documentación que permita la estandarización de los procesos y la calidad del mismo.",
             "pdf": "assets/pdfs/Solicitud-MAS-PRINT-Facturacion.pdf"
