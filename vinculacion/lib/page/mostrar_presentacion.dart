@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
+
 import 'pagina_inicio.dart';
 
 class MostrarPresentacion extends StatelessWidget {
   String pdf;
   String titulo;
-  MostrarPresentacion({Key? key, required this.pdf, required this.titulo}) : super(key: key);
+  MostrarPresentacion({Key? key, required this.pdf, required this.titulo})
+      : super(key: key);
 
   PdfViewerController pdfController = PdfViewerController();
 
@@ -30,13 +32,15 @@ class MostrarPresentacion extends StatelessWidget {
           ),
         ],
       ),
-
       body: SfPdfViewer.asset(
         pdf,
         controller: pdfController,
       ),
-
+      floatingActionButton: FloatingActionButton(
+          child: const Icon(Icons.zoom_in),
+          onPressed: () {
+            pdfController.zoomLevel = 2;
+          }),
     );
   }
 }
-

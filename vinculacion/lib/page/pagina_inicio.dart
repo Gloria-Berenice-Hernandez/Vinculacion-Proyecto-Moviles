@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vinculacion/page/sitiosinteres.dart';
 import 'package:vinculacion/widget/trabaja_scroll.dart';
 
 import '../widget/prueba_barra.dart';
@@ -13,6 +14,7 @@ class PaginaInicio extends StatefulWidget {
 class _PaginaInicioState extends State<PaginaInicio> {
   @override
   Widget build(BuildContext context) {
+    var screenSize = MediaQuery.maybeOf(context)!.size;
     return Scaffold(
       //   drawer: BarraNavegacion(),
       drawer: const Prueba(),
@@ -126,35 +128,12 @@ class _PaginaInicioState extends State<PaginaInicio> {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      Row(
-                        children: [
-                          Image.asset(
-                            'assets/images/CONACYT.png',
-                            width: 80,
-                          ),
-                          Image.asset(
-                            'assets/images/CONRICYT.png',
-                            width: 80,
-                          ),
-                          Image.asset(
-                            'assets/images/INAI.png',
-                            width: 80,
-                          ),
-                          Image.asset(
-                            'assets/images/PNT.png',
-                            width: 80,
-                          ),
-                          Image.asset(
-                            'assets/images/contraloria.png',
-                            width: 80,
-                          )
-                        ],
-                      )
                     ],
                   ),
                 ],
               ),
             ),
+            sitiosdeinteres(),
           ],
         ),
       ),

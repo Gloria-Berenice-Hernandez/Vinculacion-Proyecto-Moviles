@@ -1,44 +1,49 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
+
 import 'pagina_inicio.dart';
 
 class MostrarConvocatoria extends StatelessWidget {
   String empresa;
   String pdf;
-  MostrarConvocatoria({Key? key, required this.empresa, required this.pdf}) : super(key: key);
+  MostrarConvocatoria({Key? key, required this.empresa, required this.pdf})
+      : super(key: key);
 
   PdfViewerController pdfController = PdfViewerController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          toolbarHeight: 60,
-          title: Text(
-            empresa,
-            style: TextStyle(fontFamily: 'Alfa_Slab_One'),
-          ),
-          backgroundColor: Colors.indigo[900],
-          actions: [
-            IconButton(
-              onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => const PaginaInicio(),
-                ));
-              },
-              icon: const Icon(Icons.home),
-            ),
-          ],
+      appBar: AppBar(
+        toolbarHeight: 60,
+        title: Text(
+          empresa,
+          style: TextStyle(fontFamily: 'Alfa_Slab_One'),
         ),
-
-      body: SfPdfViewer.asset(
-          pdf,
-        initialZoomLevel: 1.58,
-        initialScrollOffset: Offset(40,30),
-        controller: pdfController,
+        backgroundColor: Colors.indigo[900],
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => const PaginaInicio(),
+              ));
+            },
+            icon: const Icon(Icons.home),
+          ),
+        ],
       ),
-
+      body: SfPdfViewer.asset(
+        pdf,
+        initialZoomLevel: 1.58,
+        initialScrollOffset: const Offset(40, 30),
+        controller: pdfController,
+        enableDoubleTapZooming: true,
+      ),
+      floatingActionButton: FloatingActionButton(
+          child: const Icon(Icons.zoom_in),
+          onPressed: () {
+            pdfController.zoomLevel = 2;
+          }),
     );
   }
 }
-
