@@ -74,8 +74,8 @@ Widget _textInfo() {
               fontWeight: FontWeight.bold),
         ),
         Text(
-          'Cumbre Nacional de Desarrollo Tecnologico, '
-          'Investigacion e Innovacion',
+          'Cumbre Nacional de Desarrollo Tecnológico, '
+          'Investigación e Innovación',
           style: TextStyle(
             fontFamily: 'Andika',
             color: Colors.black45,
@@ -108,7 +108,7 @@ class ContainerDecoration2 extends StatelessWidget {
               width: 110,
             ),
             const Text(
-              '¿Ya conoces\n' 'el codigo de conducta?',
+              '¿Ya conoces\n' 'el código de conducta?',
               style: TextStyle(
                   fontFamily: 'Andika',
                   color: Colors.black45,

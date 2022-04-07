@@ -34,7 +34,7 @@ class _PaginaInicioState extends State<PaginaInicio> {
             const Padding(
               padding: EdgeInsets.only(left: 15.0, top: 10),
               child: Text(
-                'Bienvenido',
+                'Bienvenid@',
                 style: TextStyle(
                   fontFamily: 'Andika',
                   color: Color.fromARGB(255, 157, 157, 167),
@@ -89,7 +89,7 @@ class _PaginaInicioState extends State<PaginaInicio> {
                 Column(
                   children: [
                     Text(
-                      'Comunicacion',
+                      'Comunicación',
                       style: TextStyle(
                         color: Colors.indigo[900],
                         fontSize: 25,
@@ -119,7 +119,7 @@ class _PaginaInicioState extends State<PaginaInicio> {
                   Column(
                     children: [
                       Text(
-                        'Sitios de Interes',
+                        'Sitios de Interés',
                         style: TextStyle(
                           color: Colors.indigo[900],
                           fontSize: 25,

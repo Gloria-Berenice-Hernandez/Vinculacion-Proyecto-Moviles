@@ -79,7 +79,7 @@ class _ModeloEducacionDualState extends State<ModeloEducacionDual> {
           Container(
             margin: const EdgeInsets.only(left: 15, top: 10),
             child: const Text(
-              'Tecnologico de Ens.',
+              'Tecnológico de Ens.',
               style: TextStyle(
                   color: Colors.blue,
                   fontSize: 30,
